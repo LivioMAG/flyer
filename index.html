@@ -62,7 +62,7 @@
 
     .hero {
       display: grid;
-      grid-template-columns: 0.92fr 1.45fr;
+      grid-template-columns: 1fr 1fr;
       gap: 18px;
       align-items: stretch;
       margin-bottom: 0;
@@ -72,15 +72,16 @@
       border-radius: 14px;
       overflow: hidden;
       position: relative;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--line);
+      background: #fff;
     }
 
     .image-card img {
       width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 3;
+      height: 100%;
       object-fit: cover;
       display: block;
-      border-radius: 14px;
     }
 
     .floorplan img {
@@ -212,9 +213,18 @@
 
     .benefit strong {
       font-size: 13px;
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 7px;
       margin-bottom: 7px;
       color: var(--dark);
+    }
+
+    .usp-icon {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 16px;
+      color: var(--gold);
     }
 
     .benefit span {
@@ -359,7 +369,7 @@
         <img src="2d-floor.jpg" alt="2D-Grundriss Beispiel" />
       </div>
       <div class="image-card">
-        <img src="logo.png" alt="Realistisches 3D-Rendering Beispiel" />
+        <img src="render.png" alt="Realistisches 3D-Rendering Beispiel" />
       </div>
     </section>
 
@@ -395,9 +405,9 @@
     </section>
 
     <section class="benefits">
-      <div class="benefit"><strong>Innerhalb eines halben Werktags</strong><span>Schnelle Lieferung für laufende Vermarktungs- und Verkaufsprozesse.</span></div>
-      <div class="benefit"><strong>Präzise Raumwirkung</strong><span>Direktes Kundenfeedback bestätigt eine hohe Genauigkeit der Visualisierung.</span></div>
-      <div class="benefit"><strong>Kosteneffizient</strong><span>Erstes Bild: CHF 300.– / weitere Bilder derselben Immobilie: CHF 150.– pro Bild.</span></div>
+      <div class="benefit"><strong><svg class="usp-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Innerhalb eines halben Werktags</strong><span>Schnelle Lieferung für laufende Vermarktungs- und Verkaufsprozesse.</span></div>
+      <div class="benefit"><strong><svg class="usp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 4.4-2.7 7.2-8 9-5.3-1.8-8-4.6-8-9V7l8-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 12.2l2.2 2.2 4.7-4.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Präzise Raumwirkung</strong><span>Direktes Kundenfeedback bestätigt eine hohe Genauigkeit der Visualisierung.</span></div>
+      <div class="benefit"><strong><svg class="usp-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.8v8.4M8.8 10.3h4a2 2 0 010 4h-1.6a2 2 0 000 4h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Kosteneffizient</strong><span>Erstes Bild: CHF 300.– / weitere Bilder derselben Immobilie: CHF 150.– pro Bild.</span></div>
       <div class="benefit"><strong>Stärkere Präsentation</strong><span>Ideal für Exposés, Inserate, Verkaufsdossiers und Kundentermine.</span></div>
       <div class="benefit"><strong>Mehr Verkaufspotenzial</strong><span>Räume werden verständlicher, emotionaler und überzeugender dargestellt.</span></div>
       <div class="benefit"><strong>Einfacher Prozess</strong><span>Unterlagen senden, Inputs ergänzen, fertiges Raumbild erhalten.</span></div>
