@@ -68,7 +68,8 @@
 
     .image-card {
       background: var(--white);
-      border: 1px solid var(--line);
+      border: 1px solid var(--gold);
+      border-radius: 14px;
       padding: 8px;
       position: relative;
     }
@@ -100,9 +101,9 @@
 
     .headline-wrap {
       display: grid;
-      grid-template-columns: 1fr 170px;
+      grid-template-columns: 1fr;
       gap: 30px;
-      align-items: end;
+      align-items: center;
       border-bottom: 1px solid var(--line);
       padding-bottom: 28px;
       margin-bottom: 28px;
@@ -110,6 +111,7 @@
 
     h1 {
       margin: 0;
+      text-align: center;
       font-family: Georgia, 'Times New Roman', serif;
       font-size: 48px;
       line-height: 0.98;
@@ -200,7 +202,8 @@
     .benefit {
       min-height: 82px;
       background: rgba(255,255,255,0.56);
-      border: 1px solid var(--line);
+      border: 1px solid var(--gold);
+      border-radius: 14px;
       padding: 14px;
     }
 
@@ -266,6 +269,43 @@
       border-bottom: 1px solid rgba(255,255,255,0.35);
     }
 
+
+    .contact-person h3 {
+      margin: 0 0 10px;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 100px;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .contact-meta {
+      font-size: 12px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.9);
+      text-align: left;
+    }
+
+    .contact-meta a {
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.35);
+    }
+
+    .contact-layout img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
     .small-note {
       position: absolute;
       bottom: 7mm;
@@ -309,7 +349,7 @@
     <section class="hero">
       <div class="image-card floorplan">
         <span class="label">Vorher</span>
-        <img src="2d-floor.jgp" alt="2D-Grundriss Beispiel" />
+        <img src="2d-floor.jpg" alt="2D-Grundriss Beispiel" />
       </div>
       <div class="image-card">
         <span class="label">Nachher</span>
@@ -318,10 +358,8 @@
     </section>
 
     <section class="headline-wrap">
-      <h1>Vom Grundriss zum realistischen Raumgefühl<span class="accent">.</span></h1>
-      <p class="intro">
-        Visualize Estate verwandelt 2D-Grundrisse in realistische Bilder von Räumen – präzise, schnell und bereit für Exposés, Verkaufsunterlagen und Präsentationen.
-      </p>
+      <h1>Vom Grundriss zum<br />realistischen Raumgefühl<span class="accent">.</span></h1>
+
     </section>
 
     <section class="grid">
@@ -370,11 +408,19 @@
           Senden Sie uns Ihren Grundriss und die gewünschten Inputs. Wir prüfen die Unterlagen und erstellen ein realistisches Bild des Raumes für Ihre Vermarktung.
         </p>
       </div>
-      <div class="contact">
-        <a href="mailto:david@wotlock.ch">david@wotlock.ch</a><br />
-        <a href="https://www.wotlock.ch/immobilien">www.wotlock.ch/immobilien</a><br />
-        Deutschsprachige Schweiz
-      </div>
+      <section class="contact-person">
+        <h3>Ihr Ansprechpartner</h3>
+        <div class="contact-layout">
+          <div class="contact-meta">
+            <strong>David Wotlock</strong><br />
+            Immobilien-Visualisierung<br />
+            <a href="mailto:david@wotlock.ch">david@wotlock.ch</a><br />
+            <a href="tel:+41790000000">+41 79 000 00 00</a><br />
+            <a href="https://www.wotlock.ch/immobilien">www.wotlock.ch/immobilien</a>
+          </div>
+          <img src="render.png" alt="Ansprechpartner David Wotlock" />
+        </div>
+      </section>
     </footer>
 
     <div class="small-note">
